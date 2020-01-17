@@ -7,7 +7,7 @@
     },
     "scripts": {
         "start": "nodemon src/index.js --ext js  --exec babel-node",
-        "heroku-postbuild": "cd packages/frontend && yarn install && npm run build && mkdir ../backend/dist/public && cp -R build/*.* ../backend/dist/public && cp -R build/static ../backend/dist/public/static && mv ../backend/dist/public/index.html ../backend/dist && cd ../backend && yarn install && cd ../.. && yarn install"
+        "heroku-postbuild": "cd packages/backend && yarn install"
       },
     "engines": {
         "node": "12.13.0",
