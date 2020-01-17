@@ -6,9 +6,10 @@
         ]
     },
     "scripts": {
-        "start": "yarn && npm run buildProdWeb && npm run prodServer",
-        "prodServer": "cd packages/backend && yarn && webpack --mode production --config webpack.server.config.js &&  nodemon src/index.js --ext js  --exec babel-node",
-        "buildProdWeb": "cd packages/frontend && yarn && npm run build && rm -R ../backend/dist/public && rm ../backend/dist/index.html && mkdir ../backend/dist/public && cp -R build/*.* ../backend/dist/public && cp -R build/static ../backend/dist/public/static && mv ../backend/dist/public/index.html ../backend/dist"
+        "start": "npm run heroku-postbuild && npm run buildProdWeb && npm run prodServer",
+        "prodServer": "cd packages/backend && webpack --mode production --config webpack.server.config.js &&  nodemon src/index.js --ext js  --exec babel-node",
+        "buildProdWeb": "cd packages/frontend && npm run build && rm -R ../backend/dist/public && rm ../backend/dist/index.html && mkdir ../backend/dist/public && cp -R build/*.* ../backend/dist/public && cp -R build/static ../backend/dist/public/static && mv ../backend/dist/public/index.html ../backend/dist",
+        "heroku-postbuild": "yarn install"
     },
     "engines": {
         "node": "12.13.0",
