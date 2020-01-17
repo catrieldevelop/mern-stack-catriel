@@ -1,0 +1,18 @@
+{
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "packages/*"
+        ]
+    },
+    "scripts": {
+        "start": "npm run buildProdWeb && npm run prodServer",
+        "prodServer": "export PORT=4000 && cd packages/backend && webpack --mode production --config webpack.server.config.js &&  nodemon src/index.js --ext js  --exec babel-node",
+        "buildProdWeb": "cd packages/frontend && npm run build && rm -R ../backend/dist/public && rm ../backend/dist/index.html && mkdir ../backend/dist/public && cp -R build/*.* ../backend/dist/public && cp -R build/static ../backend/dist/public/static && mv ../backend/dist/public/index.html ../backend/dist"
+    },
+    "engines": {
+        "node": "12.13.0",
+        "npm": "6.x",
+        "yarn": "1.x"
+    }
+}
