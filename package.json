@@ -6,7 +6,7 @@
         ]
     },
     "scripts": {
-        "start": "node packages/backend/src/index.js --ext js  --exec babel-node",
+        "start": "cd packages/backend/src && node index.js --ext js  --exec babel-node",
         "heroku-postbuild": "cd packages/backend && yarn install && cd ../../ && yarn install"
       },
     "engines": {
