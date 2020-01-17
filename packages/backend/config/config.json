@@ -1,11 +1,11 @@
 {
     "serverPort": 5000,
     "db": {
-        "host": "127.0.0.1",
+        "host": "ec2-52-71-122-102.compute-1.amazonaws.com",
         "dialect": "postgres",
-        "database": "cms_catriel",
-        "username": "nelson",
-        "password": "master"
+        "database": "d1ks4hbvnnok3i",
+        "username": "muxnbjsggoeskn",
+        "password": "e9952a50102fb7c2cb4b7725854558d2bb23e1b63e075675585e639bdf9164c1"
     },
     "security": {
          "secretKey": "ASDg56HJI34FDFD",
