@@ -6,11 +6,9 @@
         ]
     },
     "scripts": {
-        "start": "npm run heroku-postbuild &&  npm run prodServer",
-        "prodServer": "cd packages/backend && webpack --mode production --config webpack.server.config.js &&  nodemon src/index.js --ext js  --exec babel-node",
-        "buildProdWeb": "cd packages/frontend && npm run build && rm -R ../backend/dist/public && rm ../backend/dist/index.html && mkdir ../backend/dist/public && cp -R build/*.* ../backend/dist/public && cp -R build/static ../backend/dist/public/static && mv ../backend/dist/public/index.html ../backend/dist",
-        "heroku-postbuild": "yarn install && cd packages/frontend && yarn install && npm run build && rm -R ../backend/dist/public && rm ../backend/dist/index.html && mkdir ../backend/dist/public && cp -R build/*.* ../backend/dist/public && cp -R build/static ../backend/dist/public/static && mv ../backend/dist/public/index.html ../backend/dist"
-    },
+        "start": "nodemon src/index.js --ext js  --exec babel-node",
+        "heroku-postbuild": "cd packages/frontend && yarn install && npm run build && mkdir ../backend/dist/public && cp -R build/*.* ../backend/dist/public && cp -R build/static ../backend/dist/public/static && mv ../backend/dist/public/index.html ../backend/dist && cd ../backend && yarn install && cd ../.. && yarn install"
+      },
     "engines": {
         "node": "12.13.0",
         "npm": "6.x",

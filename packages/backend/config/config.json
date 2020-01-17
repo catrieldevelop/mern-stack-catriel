@@ -1,11 +1,11 @@
 {
     "serverPort": 5000,
     "db": {
-        "host": "ec2-174-129-230-117.compute-1.amazonaws.com",
+        "host": "ec2-52-71-122-102.compute-1.amazonaws.com",
         "dialect": "postgres",
-        "database": "d7kabkuntkg7p8",
-        "username": "sgfcksuaqbjofh",
-        "password": "008c1e08474816fc587b447cc6a2a46cd6d9e685c721efc6ca4e7d938dcb3b5a"
+        "database": "deao4j09lj3lit",
+        "username": "yfdeodtjvrljii",
+        "password": "fcb52741e1b3842dc33cdf0ec9bbdcc3634ec3600b4bb09d7cb7964581947349"
     },
     "security": {
          "secretKey": "ASDg56HJI34FDFD",
